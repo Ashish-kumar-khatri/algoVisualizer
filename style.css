@@ -1,0 +1,112 @@
+:root{
+   --shadow-gray :   rgb(194, 194, 194);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:arial;
+}
+
+nav{
+}
+
+#bars{
+    width:90%;
+    height:40vh;
+    max-width:1000px;
+    display:flex;
+    margin:2em auto 0;
+    align-items: flex-end;
+}
+
+.bar{
+    width:100%;
+    margin:0 .1em;
+    border-radius:.2em .2em 0 0;
+    display:inline-block;
+    background-color:rgb(11, 165, 226);
+    position:relative;
+    transition:height .2s ease;
+}
+
+nav .wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    padding:2em .5em;
+    gap:1em;
+    max-width:60rem;
+    margin:0 auto;
+}
+
+nav .wrapper >*{
+}
+
+nav .controls{
+    width:100%;
+    text-align:center;
+}
+
+nav .controls #inputs{
+    margin-bottom:1em;
+    margin-top:1em;
+}
+nav .controls #inputs >* >* { 
+    width:100%;
+    font-size: 1.2rem;
+    margin-top:.5em;
+}
+nav .controls > button {
+    border:none;
+    padding:.5em 2em;
+    font-size:1.1rem;
+    font-weight:bold;
+    color:white;
+    background-color:rgb(5, 177, 5);
+    border-radius:.3em;
+    margin-bottom:1em;
+}
+
+.sorting-methods{
+    padding:.5em .2em;
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap:.5em;
+    margin-bottom:5em;
+}
+
+.sorting-methods >*{
+    white-space:nowrap;
+    font-weight:bold;
+    padding:.4em 1em;
+    border:1px solid black;
+
+}
+
+input[type="radio"]{
+    display:none;
+}
+
+
+input[type="radio"]:checked ~ label{
+    color:red;
+}
+
+@media only screen and (min-width : 700px){
+    nav .controls{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    nav .controls #inputs >*{
+        display:flex;
+        text-align: left;
+    }
+}
