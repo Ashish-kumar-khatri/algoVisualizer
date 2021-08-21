@@ -6,7 +6,7 @@ const containerHeight =  arrayArea.getBoundingClientRect().height;
 const containerWidth =  arrayArea.getBoundingClientRect().width;
 const maxArraySize = 100;
 const minArraySize = 5;
-
+const sortingMethods = document.querySelector(".sorting-methods");
 
 let bars = document.querySelectorAll('.bar');
 
@@ -77,3 +77,11 @@ let swap = (bar1 , bar2) => {
 
 
 
+let disableButtons = () => {
+    arraySize.disabled = true;
+    methodsBtns = sortingMethods.querySelectorAll("div");
+    methodsBtns.forEach(method => {
+        method.disabled = true;
+        console.log(method);
+    })
+}

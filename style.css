@@ -1,5 +1,5 @@
 :root{
-   --shadow-gray :   rgb(194, 194, 194);
+   --shadow-gray :   rgb(200, 200, 200);
 }
 
 *{
@@ -9,6 +9,7 @@
 }
 
 body{
+    background-color: rgb(236, 236, 236);
     font-family:arial;
 }
 
@@ -20,7 +21,7 @@ nav{
     height:40vh;
     max-width:1000px;
     display:flex;
-    margin:2em auto 0;
+    margin:2em auto;
     align-items: flex-end;
 }
 
@@ -66,12 +67,19 @@ nav .controls > button {
     padding:.5em 2em;
     font-size:1.1rem;
     font-weight:bold;
-    color:white;
-    background-color:rgb(5, 177, 5);
+    color:black;
     border-radius:.3em;
     margin-bottom:1em;
+    box-shadow:3px 3px 5px var(--shadow-gray),
+    -3px -3px 5px white;
+    transition:transform .5s ease;
 }
-
+nav .controls > button:hover {
+    background-color:rgb(5, 177, 5);
+    color:white;
+    cursor:pointer;
+    transform:translateY(-3px);
+}
 .sorting-methods{
     padding:.5em .2em;
     width:100%;
@@ -86,10 +94,12 @@ nav .controls > button {
     white-space:nowrap;
     font-weight:bold;
     padding:.4em 1em;
-    border:1px solid black;
-
+    box-shadow:2px 2px 5px var(--shadow-gray),
+                -2px -2px 3px white;
 }
-
+.sorting-methods >div:disabled{
+    display:none;    
+}
 input[type="radio"]{
     display:none;
 }

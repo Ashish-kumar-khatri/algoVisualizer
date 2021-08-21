@@ -74,8 +74,8 @@ let mergeSort = async (bars,low,high) => {
 
 const mergeSortBtn = document.querySelector("#merge");
 mergeSortBtn.addEventListener('click',async () => {
-    console.log('indie')
+    disableButtons();
     let bars = document.querySelectorAll('.bar');
     await mergeSort(bars,0,bars.length - 1);
-    console.log(bars);
+    enableButtons();
 })
